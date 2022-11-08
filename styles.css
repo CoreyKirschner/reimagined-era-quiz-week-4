@@ -1,0 +1,169 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+.header {
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+body {
+    --hue: var(--hue-nuetral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    text-align: center;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue, 100%, 30%));
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.timer {
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.time-left-txt {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.timer-sec {
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.score {
+    margin-left: 600px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(6, 197, 250);
+    padding: 5px;
+}
+
+.score-guide {
+    margin-left: 600px;
+    background-color: white;
+}
+
+.correct-btn {
+    margin-left: 600px;
+    --hue: var(--hue-correct);
+    border: 3px solid black;
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgb(79, 78, 78);
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wrong-btn {
+    --hue: var(--hue-wrong);
+    border: 3px solid black;
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+
+    color: white;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
